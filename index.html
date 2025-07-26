@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBBS MCQ Quiz</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>MBBS MCQ Practice</h1>
+
+    <div id="topic-selector">
+      <label for="topic">Select Topic:</label>
+      <select id="topic">
+        <option value="" disabled selected>Choose topic</option>
+        <option value="Anatomy">Anatomy</option>
+        <option value="Physiology">Physiology</option>
+        <option value="Biochemistry">Biochemistry</option>
+        <option value="Pathology">Pathology</option>
+        <option value="Pharmacology">Pharmacology</option>
+        <option value="Microbiology">Microbiology</option>
+        <option value="Forensic Medicine">Forensic Medicine</option>
+        <option value="Community Medicine">Community Medicine</option>
+        <option value="Surgery">Surgery</option>
+        <option value="Medicine">Medicine</option>
+      </select>
+      <button onclick="loadTopic()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-section" style="display:none;">
+      <div id="question-container"></div>
+      <button id="next-btn" onclick="showNextQuestion()">Next</button>
+    </div>
+
+    <button id="back-btn" onclick="goBack()" style="display:none;">Back to Topics</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
